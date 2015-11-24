@@ -10,7 +10,8 @@ use objc_foundation::{INSArray, NSArray, NSString, INSString, NSObject, INSFastE
 extern {
 }
 
-pub fn current_ssid() -> Option<String> {
+/// Attempts to get the SSID of the currently connected network
+pub fn current() -> Option<String> {
     let cls = match Class::get("CWWiFiClient") {
         Some(c) => c,
         None => return None,
@@ -30,7 +31,11 @@ pub fn current_ssid() -> Option<String> {
     }
 }
 
-pub fn list_all_networks() -> Vec<String> {
+/// Returns a Vec<String> with SSIDs of networks in range.
+///
+/// Performs a scan and blocks while scanning.
+/// Returns an empty Vec on failure.
+pub fn list_all() -> Vec<String> {
     let cls = match Class::get("CWWiFiClient") {
         Some(c) => c,
         None => return vec![],
