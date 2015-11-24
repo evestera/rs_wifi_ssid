@@ -1,0 +1,10 @@
+[package]
+name = "rs_wifi_ssid"
+version = "0.1.0"
+description = "Helpers for reading WiFi names"
+license = "MIT"
+authors = ["Erik Vesteraas <erik@vestera.as>"]
+
+[dependencies]
+objc = "0.1.8"
+objc-foundation = "0.0.3"
