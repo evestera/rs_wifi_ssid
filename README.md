@@ -2,7 +2,7 @@
 
 Helpers for reading WiFi names.
 
-Currently only works on OS X.
+Currently only works on OS X and Linux (only current ssid).
 
 ```rust
 extern crate rs_wifi_ssid;

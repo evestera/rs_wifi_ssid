@@ -5,6 +5,6 @@ description = "Helpers for reading WiFi names"
 license = "MIT"
 authors = ["Erik Vesteraas <erik@vestera.as>"]
 
-[dependencies]
+[target.x86_64-apple-darwin.dependencies]
 objc = "0.1.8"
 objc-foundation = "0.0.3"
