@@ -2,7 +2,7 @@
 
 Helpers for reading WiFi names.
 
-Currently only works on OS X and Linux (only current ssid).
+Works on OS X and Windows. On Linux `current()` works, but `list_all()` is currently not implemented.
 
 ```rust
 extern crate rs_wifi_ssid;
